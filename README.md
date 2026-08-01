@@ -1,6 +1,7 @@
 # airig250000000247.github.io
-<body>
+<body style="background-color: powderblue;">
  <h1> Activities </h1>
+ <p style="bacground-color: white;">"my activities"</p>
  <a href="https://airig250000000247-source.github.io/winefestival/index.html" target="_blank">
         <button>🍷 Open Wine Festival</button>
     </a>
