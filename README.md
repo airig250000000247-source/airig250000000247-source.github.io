@@ -1,7 +1,7 @@
 # airig250000000247.github.io
 <body>
 <!DOCTYPE html>
- <h1> Ashley Jean V> Irig </h1>
+ <h1> Ashley Jean V. Irig </h1>
  <a href="airig250000000247-source.github.io/winefestival/index.html" target="_blank">
         <button>🍷 Open Wine Festival</button>
     </a>
