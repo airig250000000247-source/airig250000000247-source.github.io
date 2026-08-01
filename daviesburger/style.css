@@ -1,97 +1,102 @@
-nav {
-  height: 80px;
-  background-color: #2E3033;
-  padding: 0px 40px;
-}
+body {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_foodlogo.png");
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  nav {
+    text-align: center;
+  
+  }
+  
+  nav img {
+    display: block;
+  }
+  
+  nav span {
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+  }
+  
+  nav a {
+    color: #666666;
+  }
+ 
+  
+  .content {
+    width: 100%;
+  }
 
-nav img {
-  float: left;
-  margin-top: 20px;
-}
+  
+  .header {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burgerphoto.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .header h1 {
+    background-color: #05A8AA;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 40px;
+    width: 68%;
+  }
+  
+  .content .body {
+    width: 90%;
+  }
+  
+  .body p {
+    color: #333333;
+    font-weight: 100;
+    line-height: 34px;
+    width: 90%;
+    margin-top: 18px;
+  }
+  
+  
+  .button {
+    border-radius: 4px;
+    color: #05A8AA;
+    display: block;
+    font-weight: 700;
+  }
+  
+  .button:hover {
+    background-color: #05A8AA;
+    border: 1px solid #05A8AA;
+    color: #FFF;
+  }
+  
+  ul.nutrition {
 
-nav span {
-  float: right;
-  line-height: 80px;
-  margin-left: 30px;
-}
-
-nav a {
-  color: #A3A7AD;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-
-.header {
-  background-image: url('https://s3.amazonaws.com/codecademy-content/courses/web-101/unit-6/htmlcss1-img_burger-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  text-align: center;
-}
-
-.header h1 {
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 54px;
-  font-weight: 700;
-  line-height: 500px;
-  letter-spacing: 2px;
-}
-
-
-.content {
-  width: 700px;
-  margin: 60px auto;
-}
-
-.content p {
-  color: #63686E;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 32px;
-  margin-bottom: 40px;
-}
-
-.content a {
-  background-color: #E65100;
-  color: #FFFFFF;
-  display: inline-block;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 18px 36px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  border-radius: 4px;
-}
-
-
-ul {
-  border-top: 1px solid #E1E3E6;
-  margin-top: 60px;
-  padding-top: 20px;
-}
-
-li {
-  border-bottom: 1px solid #E1E3E6;
-  padding: 16px 0px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-}
-
-li span:first-child {
-  color: #A3A7AD;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-li span:last-child {
-  color: #2E3033;
-  float: right;
-  font-weight: 700;
-}
+  }
+  
+  ul.nutrition li {
+    display: inline-block;
+    background-color: #05A8AA;
+    list-style: none;
+  }
+  
+  .nutrition .category {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    display: block;
+  }
+  
+  .nutrition .value {
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
