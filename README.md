@@ -1,15 +1,19 @@
 # airig250000000247.github.io
 <body>
-<h1> Hello! EVRERYNYAAAAAAA! How are you? im fine, THANK YOU :D </h1>
-<h1>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+</head>
  <a href="https://airig2500000000247-source.github.io/winefestival/wine.html" target="_blank">
         <button>🍷 Open Wine Festival</button>
     </a>
 
 <br><br>
 
-<a href="https://airig2500000000247-source.github.io/fashionblog.html" target="_blank">
+<a href='airig250000000247-source.github.io/fashionblog.html' target="_blank">
         <button>👗 Open Fashion Blog</button>
     </a>
 
