@@ -14,7 +14,7 @@
 
 <br><br>
 
- <a href="https://airig250000000247-source.github.io/winefestival/index.html" target="_blank">
+ <a href="https://airig250000000247-source.github.io/daviesburger/index.html" target="_blank">
         <button>🍔 Open Davies Burger</button>
     </a>
 
