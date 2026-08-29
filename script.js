@@ -1,11 +1,11 @@
 // Dialogue Array for Rick Speech Bubble
 const rickDialogues = [
   'EMAIL ME AT:<br><strong><a href="mailto:airig_250000000@uic.edu.ph">airig_250000000@uic.edu.ph</a></strong>',
-  
+
   'GITHUB REPOSITORY:<br><strong><a href="https://github.com/airig250000000247-source/airig.github.io" target="_blank">airig_250000000.github.io</a></strong>',
-  
+
   'LINKEDIN PROFILE:<br><strong><a href="https://www.linkedin.com/in/ashley-jean-v-irig-363507432" target="_blank">Ashley.linkedin</a></strong>',
-  
+
   'SOCIALS & MEDIA:<br><strong><a href="https://www.instagram.com/ash.25000000247/" target="_blank">@insta.ash</a></strong>'
 ];
 

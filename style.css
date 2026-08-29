@@ -518,11 +518,7 @@ button:active,
   z-index: 2;
 }
 
-
-/* =========================================
-   3 PROJECT SLOTS
-   ========================================= */
-
+/* Project Slots */
 .binder-container {
   width: 100%;
 
@@ -623,11 +619,7 @@ button:active,
   background-color: #2b5329;
 }
 
-
-/* =========================================
-   APPLE + MORTY NAVIGATION
-   ========================================= */
-
+/* Morty & Nav */
 .apple-nav {
   width: 100%;
 
@@ -686,10 +678,7 @@ button:active,
       1.275);
 }
 
-
-/* =========================================
-   MORTY UNDER APPLES
-   ========================================= */
+/* Morty below Apples */
 
 .morty-peek-btn {
   grid-column: 1 / -1;
@@ -740,10 +729,7 @@ button:active,
   transform: scale(1.15) rotate(-3deg);
 }
 
-
-/* =========================================
-   MOBILE WORK SECTION
-   ========================================= */
+/* Mobile Work */
 
 @media (max-width: 800px) {
 
