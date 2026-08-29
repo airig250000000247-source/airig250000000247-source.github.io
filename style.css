@@ -988,6 +988,15 @@ body.portal-mode-active .site-wrapper {
     text-align: left;
   }
 
+  .speech-bubble a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .speech-bubble a:hover {
+    text-decoration: underline;
+  }
+
   .speech-bubble::before {
     top: 50%;
     left: -10px;
