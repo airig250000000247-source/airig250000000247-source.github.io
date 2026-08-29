@@ -1,43 +1,152 @@
 // Dialogue Array for Rick Speech Bubble
 const rickDialogues = [
-  "EMAIL ME AT:<br><strong>ashley.irig@gmail.com</strong>",
-  "GITHUB REPOSITORY:<br><strong>github.com/yourusername</strong>",
-  "LINKEDIN PROFILE:<br><strong>linkedin.com/in/yourusername</strong>",
-  "SOCIALS & MEDIA:<br><strong>@yourhandle</strong>"
+  "EMAIL ME AT:<br><strong>airig_250000000@uic.edu.ph</strong>",
+  "GITHUB REPOSITORY:<br><strong>airig_250000000.github.io</strong>",
+  "LINKEDIN PROFILE:<br><strong>lash.linkedin</strong>",
+  "SOCIALS & MEDIA:<br><strong>insta.ash</strong>"
 ];
 
 let currentDialogueIndex = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
+  // --- 1. 3D MOUNTAIN & CLOUD PARALLAX ---
 
-  // --- 1. REFINED 3D MOUNTAIN & CLOUD PARALLAX MANEUVER ---
   const parallaxScene = document.getElementById("parallax-scene");
   const parallaxLayers = document.querySelectorAll(".parallax-layer");
 
   if (parallaxScene) {
+
     parallaxScene.addEventListener("mousemove", (e) => {
+
       const rect = parallaxScene.getBoundingClientRect();
+
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
 
-      const tiltX = (y / rect.height) * -12;
-      const tiltY = (x / rect.width) * 12;
+      const normalizedX = x / (rect.width / 2);
+      const normalizedY = y / (rect.height / 2);
+
+      const tiltX = normalizedY * -10;
+      const tiltY = normalizedX * 10;
 
       parallaxLayers.forEach((layer) => {
-        const speed = parseFloat(layer.getAttribute("data-speed")) || 0.05;
-        const depthZ = parseFloat(layer.getAttribute("data-z")) || 0;
 
-        const xOffset = x * speed * 1.5;
-        const yOffset = y * speed * 0.8;
+        const speed =
+          parseFloat(layer.getAttribute("data-speed")) || 0.05;
 
-        layer.style.transform = `translate3d(${xOffset}px, ${yOffset}px, ${depthZ}px) rotateX(${tiltX * speed}deg) rotateY(${tiltY * speed}deg)`;
+        const depthZ =
+          parseFloat(layer.getAttribute("data-z")) || 0;
+
+        const isMountain =
+          layer.classList.contains("mountain");
+
+        if (isMountain) {
+
+          const mountainSpeed =
+            parseFloat(
+              getComputedStyle(layer)
+                .getPropertyValue("--mountain-speed")
+            ) || speed;
+
+          const mountainDepth =
+            parseFloat(
+              getComputedStyle(layer)
+                .getPropertyValue("--mountain-depth")
+            ) || depthZ;
+
+          const xOffset =
+            normalizedX *
+            rect.width *
+            mountainSpeed;
+
+          const yOffset =
+            normalizedY *
+            35 *
+            mountainSpeed *
+            10;
+
+          const rotateX =
+            tiltX *
+            mountainSpeed *
+            2;
+
+          const rotateY =
+            tiltY *
+            mountainSpeed *
+            2;
+
+          layer.style.transform =
+            `translate3d(
+            ${xOffset}px,
+            ${yOffset}px,
+            ${mountainDepth}px
+          )
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)`;
+
+        } else {
+
+          const xOffset =
+            x *
+            speed *
+            1.5;
+
+          const yOffset =
+            y *
+            speed *
+            0.8;
+
+          layer.style.transform =
+            `translate3d(
+            ${xOffset}px,
+            ${yOffset}px,
+            ${depthZ}px
+          )
+          rotateX(${tiltX * speed}deg)
+          rotateY(${tiltY * speed}deg)`;
+        }
       });
     });
 
+
     parallaxScene.addEventListener("mouseleave", () => {
+
       parallaxLayers.forEach((layer) => {
-        const depthZ = parseFloat(layer.getAttribute("data-z")) || 0;
-        layer.style.transform = `translate3d(0px, 0px, ${depthZ}px) rotateX(0deg) rotateY(0deg)`;
+
+        const depthZ =
+          parseFloat(layer.getAttribute("data-z")) || 0;
+
+        const isMountain =
+          layer.classList.contains("mountain");
+
+        if (isMountain) {
+
+          const mountainDepth =
+            parseFloat(
+              getComputedStyle(layer)
+                .getPropertyValue("--mountain-depth")
+            ) || depthZ;
+
+          layer.style.transform =
+            `translate3d(
+            0px,
+            0px,
+            ${mountainDepth}px
+          )
+          rotateX(0deg)
+          rotateY(0deg)`;
+
+        } else {
+
+          layer.style.transform =
+            `translate3d(
+            0px,
+            0px,
+            ${depthZ}px
+          )
+          rotateX(0deg)
+          rotateY(0deg)`;
+        }
       });
     });
   }
@@ -140,11 +249,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (rickAvatarBtn && rickText) {
     rickAvatarBtn.addEventListener("click", () => {
       currentDialogueIndex = (currentDialogueIndex + 1) % rickDialogues.length;
-      
+
       rickText.style.animation = 'none';
       void rickText.offsetWidth; // Force CSS animation reflow
       rickText.style.animation = 'bubblePop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-      
+
       rickText.innerHTML = rickDialogues[currentDialogueIndex];
     });
   }
